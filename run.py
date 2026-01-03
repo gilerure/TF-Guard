@@ -22,11 +22,11 @@ if __name__ == '__main__':
     torch.backends.cudnn.benchmark = False
     torch.backends.cudnn.deterministic = True
 
-    parser = argparse.ArgumentParser(description='TFEnhanced & Transformer family for Time Series Anomaly Detection')
+    parser = argparse.ArgumentParser(description='TF-Guard & Transformer family for Time Series Anomaly Detection')
 
     # basic config
     parser.add_argument('--task', type=str, default='train', help='status', choices=['train', 'test', 'detection'])
-    parser.add_argument('--model', type=str, default='TFEnhanced')
+    parser.add_argument('--model', type=str, default='TFGuard')
     parser.add_argument('--method', type=str, default='main', help='task type', choices=['main', 'benchmark'])
 
     # supplementary config for FEDFormer model
@@ -47,7 +47,7 @@ if __name__ == '__main__':
     # supplementary config for Autoformer model
     parser.add_argument('--factor', type=int, default=1, help='attn factor')
 
-    # supplementary config for TFEnhanced model
+    # supplementary config for TF-Guard model
     parser.add_argument('--threshold', type=float, default=6)
 
     # data loader

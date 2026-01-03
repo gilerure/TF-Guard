@@ -12,7 +12,7 @@ from sklearn.metrics import precision_recall_fscore_support
 from sklearn.metrics import accuracy_score
 
 from exp.exp_basic import Exp_Basic
-from models import TFEnhanced, FEDformer, OmniAnomaly, Autoformer, Informer
+from models import TFGuard, FEDformer, OmniAnomaly, Autoformer, Informer
 from data_provider.data_factory import data_provider
 
 warnings.filterwarnings('ignore')
@@ -23,7 +23,7 @@ class Exp_Main(Exp_Basic):
 
     def _build_model(self):
         model_dict = {
-            'TFEnhanced': TFEnhanced,
+            'TFGuard': TFGuard,
             'FEDformer': FEDformer,
             'OmniAnomaly': OmniAnomaly,
             'Autoformer': Autoformer,
