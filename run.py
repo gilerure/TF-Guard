@@ -1,7 +1,3 @@
-# -*- coding: utf-8 -*-
-# Author: Qinghua Liu <liu.11085@osu.edu>
-# License: Apache-2.0 License
-
 import os
 import torch
 import random, argparse
@@ -47,12 +43,9 @@ if __name__ == '__main__':
     # supplementary config for Autoformer model
     parser.add_argument('--factor', type=int, default=1, help='attn factor')
 
-    # supplementary config for TF-Guard model
-    parser.add_argument('--threshold', type=float, default=6)
-
     # data loader
     parser.add_argument('--root_path', type=str, default='dataset/SPR-Offline')
-    parser.add_argument('--win_size', type=int, default=256)
+    parser.add_argument('--win_size', type=int, default=256, help='window length for detection')
     parser.add_argument('--batch_size', type=int, default=128)
     parser.add_argument('--checkpoints', type=str, default='./checkpoints/', help='location of model checkpoints')
 
@@ -70,9 +63,10 @@ if __name__ == '__main__':
     parser.add_argument('--d_layers', type=int, default=1, help='num of decoder layers')
 
     parser.add_argument('--hidden_dim', type=int, default=64, help='dimension of hidden layer')
-    parser.add_argument('--kernel_size', type=int, nargs='+', default=(8, 16, 32, 64), help='kernel size in MOEDecomp block')
-    parser.add_argument('--patch_size', type=int, default=32, help='patching size in fwm block')
-    parser.add_argument('--K', type=int, default=6, help='top k frequency component selected')
+    parser.add_argument('--kernel_size', type=int, nargs='+', default=(8, 16, 32, 64), help='kernel size in Mixture of Seasonals block')
+    parser.add_argument('--patch_size', type=int, default=32, help='patching size in Spectral Flux Modeling block')
+    parser.add_argument('--K', type=int, default=8, help='top k spectral flux selected')
+    parser.add_argument('--threshold', type=float, default=6, help='threshold tau for anomaly detection')
 
     # optimization
     parser.add_argument('--learning_rate', type=float, default=0.002, help='optimizer learning rate')  
