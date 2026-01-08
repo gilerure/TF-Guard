@@ -160,7 +160,6 @@ class InnerAutoencoder(nn.Module):
 
 class Solver():
     def __init__(self, configs,
-                 n_features = 1,
                  hidden_neurons=None,
                  learning_rate=1e-3,
                  dropout_rate=0):
@@ -186,7 +185,7 @@ class Solver():
 
         # initialize the model
         self.model = InnerAutoencoder(
-            n_features=n_features,
+            n_features=configs.enc_in,
             hidden_neurons=self.hidden_neurons,
             dropout_rate=self.dropout_rate,
             n_mem = self.n_mem,

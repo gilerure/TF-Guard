@@ -1,5 +1,4 @@
 """
-This function is adapted from [pyod] by [carrtesy]
 Original source: [https://github.com/carrtesy/THOC-Pytorch]
 """
 
@@ -237,8 +236,6 @@ class DRNN(nn.Module):
 
 class Solver():
     def __init__(self, configs,
-                 feats=1,
-                 win_size=256,
                  hidden_dim=128,
                  lr=1e-3,
                  L2_reg=1.0,
@@ -249,8 +246,8 @@ class Solver():
 
         self.lambda_orth = 1.0
         self.lambda_tss = 1.0
-        self.feats = feats
-        self.win_size = win_size
+        self.feats = configs.enc_in
+        self.win_size = configs.win_size
         self.hidden_dim = hidden_dim
         self.batch_size = configs.batch_size
         self.epochs = configs.epochs

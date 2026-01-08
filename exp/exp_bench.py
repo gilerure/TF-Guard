@@ -11,7 +11,7 @@ from sklearn.metrics import precision_recall_fscore_support
 from sklearn.metrics import accuracy_score
 
 from exp.exp_basic import Exp_Basic
-from models import AnomalyTransformer, BeatGAN, DCdetector, AMSL, MEMTO, THOC, DAGMM, OCSVM, IForest, MARPP
+from models import AnomalyTransformer, BeatGAN, AMSL, THOC, DAGMM, OCSVM, IForest, MARPP
 from data_provider.data_factory import data_provider
 
 warnings.filterwarnings('ignore')

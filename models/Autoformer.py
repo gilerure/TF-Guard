@@ -1,3 +1,7 @@
+"""
+Original source: [https://github.com/thuml/Autoformer]
+"""
+
 import torch.nn as nn
 from layers.Embed import DataEmbedding_wo_pos
 from layers.AutoCorrelation import AutoCorrelation, AutoCorrelationLayer
@@ -5,12 +9,6 @@ from layers.Autoformer_EncDec import Encoder, EncoderLayer, my_Layernorm, series
 
 
 class Model(nn.Module):
-    """
-    Autoformer is the first method to achieve the series-wise connection,
-    with inherent O(LlogL) complexity
-    Paper link: https://openreview.net/pdf?id=I55UqU-M11y
-    """
-
     def __init__(self, configs):
         super(Model, self).__init__()
         self.seq_len = configs.seq_len

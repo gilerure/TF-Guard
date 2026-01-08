@@ -1,3 +1,7 @@
+"""
+Original source: [https://github.com/MAZiqing/FEDformer]
+"""
+
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
@@ -10,14 +14,7 @@ import math
 import numpy as np
 
 
-device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
-
-
 class Model(nn.Module):
-    """
-    FEDformer performs the attention mechanism on frequency domain and achieved O(N) complexity
-    Paper link: https://proceedings.mlr.press/v162/zhou22g.html
-    """
     def __init__(self, configs):
         super(Model, self).__init__()
         self.version = configs.version

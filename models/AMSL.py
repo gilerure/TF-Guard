@@ -1,3 +1,7 @@
+"""
+Original source: [https://github.com/zhangyuxin621/AMSL]
+"""
+
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
@@ -85,7 +89,6 @@ def transformation(x: torch.Tensor, device):
         lab[:, idx] = 1.0
         labels.append(lab)
 
-    # 转回 tensor 并移到 device
     rt_x = [torch.from_numpy(arr).to(device) for arr in augmented]
     rt_labels = [torch.from_numpy(lab).to(device) for lab in labels]
 

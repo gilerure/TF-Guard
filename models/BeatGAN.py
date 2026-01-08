@@ -1,3 +1,7 @@
+"""
+Original source: [https://github.com/hi-bingo/BeatGAN]
+"""
+
 import os,pickle
 import numpy as np
 import torch
@@ -143,13 +147,12 @@ class Generator(nn.Module):
 
 class Solver():
     def __init__(self, configs,
-                 feats=1,
                  learning_rate=1e-4,
                  beta=0.4,
                  ):
         super(Solver, self).__init__()
         self.w_adv = 1
-        self.nc = feats
+        self.nc = configs.feats
         self.nz = configs.d_model
         self.ndf = configs.hidden_dim
         self.ngf = configs.hidden_dim

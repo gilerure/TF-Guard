@@ -1,10 +1,9 @@
 import torch
 from torch import nn
-
 from layers.Embed import DataEmbedding
 from layers.SelfAttention_Family import CrossAttention
 from layers.Scale import ScaleMLP, FourierScaleMLP
-from layers.MoS import MOSDecomp
+from layers.Autoformer_EncDec import MOSDecomp
        
 class Model(nn.Module):
     def __init__(self, configs):

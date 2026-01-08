@@ -1,3 +1,8 @@
+"""
+Original source: [https://github.com/lixiangwang/DAGMM-pytorch]
+"""
+
+
 import torch
 import torch.nn as nn
 from torch import optim
@@ -156,12 +161,7 @@ class DAGMMModel(nn.Module):
 
 
 class Solver():
-    def __init__(self, configs,
-                 win_size=256,
-                 feats=1,
-                 learning_rate=1e-4,
-                 epochs=20,
-                 batch_size=128):
+    def __init__(self, configs, learning_rate=1e-4):
         super(Solver, self).__init__()
         self.n_gmm = 4
         self.latent_dim = 1
@@ -172,11 +172,11 @@ class Solver():
         self.mu = None
         self.cov = None
 
-        self.win_size = win_size
-        self.feats = feats
+        self.win_size = configs.win_size
+        self.feats = configs.feats
         self.learning_rate = learning_rate
-        self.epochs = epochs
-        self.batch_size = batch_size
+        self.epochs = configs.epochs
+        self.batch_size = configs.batch_size
         self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
         self.model = DAGMMModel(feats=self.win_size*self.feats, n_gmm=self.n_gmm, z_dim=self.latent_dim).to(self.device)

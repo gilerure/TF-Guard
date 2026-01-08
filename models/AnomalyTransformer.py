@@ -1,5 +1,4 @@
 """
-This function is adapted from [Anomaly-Transformer] by [wuhaixu2016]
 Original source: [https://github.com/thuml/Anomaly-Transformer]
 """
 

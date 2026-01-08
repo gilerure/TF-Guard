@@ -1,3 +1,8 @@
+"""
+Original source: [https://github.com/zhouhaoyi/Informer2020]
+"""
+
+
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
@@ -7,11 +12,6 @@ from layers.Embed import DataEmbedding_wo_pos
 
 
 class Model(nn.Module):
-    """
-    Informer with Propspare attention in O(LlogL) complexity
-    Paper link: https://ojs.aaai.org/index.php/AAAI/article/view/17325/17132
-    """
-
     def __init__(self, configs):
         super(Model, self).__init__()
         self.pred_len = configs.pred_len
