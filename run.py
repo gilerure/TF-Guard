@@ -44,7 +44,7 @@ if __name__ == '__main__':
     parser.add_argument('--factor', type=int, default=1, help='attn factor')
 
     # data loader
-    parser.add_argument('--root_path', type=str, default='dataset/SPR-Offline')
+    parser.add_argument('--root_path', type=str, default='dataset/')
     parser.add_argument('--win_size', type=int, default=256, help='window length for detection')
     parser.add_argument('--batch_size', type=int, default=128)
     parser.add_argument('--checkpoints', type=str, default='./checkpoints/', help='location of model checkpoints')
