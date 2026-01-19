@@ -5,6 +5,9 @@
 ## Data
 Due to the high sensitivity of manufacturing data, we can not present the exact datasets for training, evaluation and online detection. Instead, we curated publicly available set of 303 curves under permission, including 34 normal and 269 abnormal samples, and normalized them to preserve their characteristics. These data are provided in the `dataset` folder.
 
+## Main Result
+We compare our model with 12 baselines. Our method consistently outperforms across all five metrics: accuracy, AUC, precision, recall and F1-score. 
+
 ## Contact
 If you have any question or want to use the code, please contact gilerure@sjtu.edu.cn or gao_mohan@sjtu.edu.cn.
 
