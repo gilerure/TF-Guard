@@ -4,7 +4,7 @@
 
 ## Data
 Due to the sensitivity of manufacturing data, we are unable to share the original datasets used for training, evaluation, and online detection.
-Instead, with appropriate permissions, we curated a sample dataset of 303 normalized normal SPR displacement-force curves for public release.
+Instead, with appropriate permissions, we curated a sample dataset of 303 normalized SPR displacement-force curves from defect-free processes for public release.
 The normalization methodology was carefully designed to preserve their intrinsic morphological characteristics, ensuring analytical value while maintaining confidentiality. These preprocessed samples are provided in the `dataset` folder.
 
 ## Main Result
