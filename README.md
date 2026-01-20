@@ -9,6 +9,7 @@ The normalization methodology was carefully designed to preserve their intrinsic
 
 ## Main Result
 We compare our model with 12 baselines. Our method consistently outperforms across all five metrics: accuracy, AUC, precision, recall and F1-score. 
+![result](https://github.com/gilerure/TF-Guard/blob/master/figures/result.png)
 
 <!-- ## Contact -->
 <!-- If you have any question or want to use the code, please contact gilerure@sjtu.edu.cn or gao_mohan@sjtu.edu.cn. -->
