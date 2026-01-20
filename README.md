@@ -3,13 +3,15 @@
 ## Get Started
 
 ## Data
-Due to the high sensitivity of manufacturing data, we can not present the exact datasets for training, evaluation and online detection. Instead, we curated publicly available set of 303 curves under permission, including 34 normal and 269 abnormal samples, and normalized them to preserve their characteristics. These data are provided in the `dataset` folder.
+Due to the sensitivity of manufacturing data, we are unable to share the original datasets used for training, evaluation, and online detection.
+Instead, with appropriate permissions, we curated a sample dataset of 303 normalized SPR displacement-force curves (34 normal and 269 abnormal samples) for public release.
+The normalization methodology was carefully designed to preserve their intrinsic morphological characteristics, ensuring analytical value while maintaining confidentiality. These preprocessed samples are provided in the `dataset` folder.
 
 ## Main Result
 We compare our model with 12 baselines. Our method consistently outperforms across all five metrics: accuracy, AUC, precision, recall and F1-score. 
 
-## Contact
-If you have any question or want to use the code, please contact gilerure@sjtu.edu.cn or gao_mohan@sjtu.edu.cn.
+<!-- ## Contact -->
+<!-- If you have any question or want to use the code, please contact gilerure@sjtu.edu.cn or gao_mohan@sjtu.edu.cn. -->
 
 ## Acknowledgement
 We appreciate the following github repos a lot for their valuable code base:
